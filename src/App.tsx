@@ -14,6 +14,7 @@ function App() {
         value={stars}
         onChange={handleChange}
         starStyle={{ fontSize: "3em" }}
+        descriptionStyle={{ fontSize: "1em" }}
         valueDescription={{
           1: "bad",
           2: "normal",

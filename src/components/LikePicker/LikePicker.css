@@ -5,6 +5,9 @@
     cursor: pointer;
     user-select: none;
     }
+.like-picker-star, like-picker-description{
+    font-family: 'Times New Roman', Times, serif;
+}
 
 .like-picker-star:hover::after{
     content:'☆';

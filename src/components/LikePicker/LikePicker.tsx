@@ -28,7 +28,6 @@ function LikePicker({
 
   useEffect(() => {
     const onOverHandler = (evt: Event) => {
-      console.log("!");
       setState((oldState) => ({ ...oldState, selecting: 0 }));
     };
     if (ref && ref.current)
@@ -60,12 +59,12 @@ function LikePicker({
         })}
       </div>
       {valueDescription && Object.keys(valueDescription).length > 0 && (
-        <span
+        <div
           className="like-picker-description"
-          style={{ color: "black", ...descriptionStyle }}
+          style={{ fontSize: "xx-small", color: "black", ...descriptionStyle }}
         >
           {valueDescription?.[value]}
-        </span>
+        </div>
       )}
     </div>
   );

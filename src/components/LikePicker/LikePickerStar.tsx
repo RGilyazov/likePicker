@@ -36,8 +36,6 @@ function LikePickerStar({
       className="like-picker-star"
     >
       {selected ? "★" : "☆"}
-      <span className="like-picker-star-a1"></span>
-      <span className="like-picker-star-a2"></span>
     </span>
   );
 }
