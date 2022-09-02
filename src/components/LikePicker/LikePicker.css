@@ -3,7 +3,8 @@
     transition-duration: 500ms;
     position: relative;
     cursor: pointer;
-}
+    user-select: none;
+    }
 
 .like-picker-star:hover::after{
     content:'☆';

@@ -6,6 +6,7 @@ type LikePickerStarProps = {
   selecting: boolean;
   onHover?: (id: number) => void;
   onClick?: (id: number) => void;
+  style?: React.CSSProperties;
 };
 function LikePickerStar({
   id,
@@ -13,6 +14,7 @@ function LikePickerStar({
   selecting,
   onHover,
   onClick,
+  style,
 }: LikePickerStarProps) {
   const ref = useRef<HTMLSpanElement>(null);
   useEffect(() => {
@@ -29,7 +31,7 @@ function LikePickerStar({
   }, [ref, id, onHover, onClick]);
   return (
     <span
-      style={selecting ? { color: "blue" } : { color: "yellow" }}
+      style={{ color: selecting ? "blue" : "yellow", ...style }}
       ref={ref}
       className="like-picker-star"
     >

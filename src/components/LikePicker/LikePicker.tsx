@@ -4,8 +4,16 @@ type LikePickerProps = {
   max: number;
   value?: number;
   onChange?: (value: number) => void;
+  starStyle?: React.CSSProperties;
+  style?: React.CSSProperties;
 };
-function LikePicker({ max, value = 0, onChange }: LikePickerProps) {
+function LikePicker({
+  max,
+  value = 0,
+  onChange,
+  starStyle,
+  style,
+}: LikePickerProps) {
   const [state, setState] = useState({ selecting: 0 });
   const ref = useRef<HTMLDivElement>(null);
 
@@ -26,7 +34,7 @@ function LikePicker({ max, value = 0, onChange }: LikePickerProps) {
   }
 
   return (
-    <div ref={ref} className="like-picker">
+    <div ref={ref} className="like-picker" style={{ ...style }}>
       {[...Array(max)].map((_, index) => {
         return (
           <LikePickerStar
@@ -36,6 +44,7 @@ function LikePicker({ max, value = 0, onChange }: LikePickerProps) {
             selecting={state.selecting > index}
             onHover={handleHover}
             onClick={handleClick}
+            style={starStyle}
           />
         );
       })}

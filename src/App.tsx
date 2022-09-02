@@ -9,7 +9,12 @@ function App() {
   }
   return (
     <div className="App">
-      <LikePicker max={5} value={stars} onChange={handleChange} />
+      <LikePicker
+        max={5}
+        value={stars}
+        onChange={handleChange}
+        starStyle={{ fontSize: "3em" }}
+      />
     </div>
   );
 }
